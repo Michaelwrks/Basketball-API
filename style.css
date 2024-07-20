@@ -1,0 +1,441 @@
+/* @import 'https://fonts.googleapis.com/css?family=Lily+Script+One'; */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background: #eee; */
+  font-family: 'Lily Script One';
+  background-color: rgb(161, 221, 216);
+  background: linear-gradient(90deg, rgb(11, 10, 10) 0%, rgb(77, 82, 83) 35%, rgb(5, 42, 42) 150%);
+
+
+}
+
+
+
+  header{
+    display: inline-block;
+    
+  }
+
+  .nba-logo{
+    width: 10%;
+    min-width: 250px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+
+  form{
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    height: 80px;
+    background: rgb(234, 236, 239);
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+  }
+
+  form input{
+    flex: 1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #090606;
+    font-size: 18px;
+    padding: 0 30px;
+  }
+
+form button{
+padding:0 40px;
+height: 100%;
+background: rgb(188, 207, 201);
+font-size: 18px;
+border: 0;
+outline: 0;
+border-top-right-radius: 8px;
+border-bottom-right-radius: 8px;
+cursor: pointer;
+
+}
+
+::placeholder{
+  color: #0d0c0c;
+  font-size: 18px;
+}
+
+
+#show-more-btn{
+  background: #ff3929;
+  color: #fff;
+  border: 0;
+outline: 0;
+padding:  10px 20px;
+border-radius: 4px;
+margin: 10px auto 100px;
+display:  none;
+
+}
+
+.cards {
+    /* background-color: rgb(31, 29, 29); */
+    color: black;
+    margin: 20px;
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    width: 300px;
+    height: 400px;
+    position: relative;
+    perspective: 1000px;
+    
+  }
+
+  .content {  
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    
+  }
+
+  .cards:hover .content {
+    transform: rotateY(180deg);
+    border: 3px #acddac solid;
+    border-radius: 8px;
+  }
+
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+
+  .front {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .back {
+    background-color: rgb(236, 218, 218);
+    transform: rotateY(180deg);
+  }
+
+  .cards h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .cards p {
+    margin: 5px 0;
+    text-align: left;
+    width: 100%;
+    font-size: 1.1em;
+
+  }
+
+  .cards img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .cards {
+      margin: 10px;
+      width: 100%;
+    }
+
+    .cards h2 {
+      font-size: 1.2em;
+    }
+
+    .cards p {
+      font-size: 0.9em;
+    }
+
+    .cards img {
+      max-width: 70%;
+    }
+  }
+
+  #stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+    a {
+      text-decoration: none;
+    }
+    
+    .container {
+      width: 1170px;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+
+    
+    
+    nav {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      width: 349px;
+      display: table;
+      margin: 0 auto;
+      transform: translateY(-50%);
+      z-index: 9999;
+      margin-top: -390px
+    }
+    
+
+    @media only screen and (min-height:1422px) {
+    nav{
+      
+      margin-top: -690px
+    }
+    }
+
+    @media only screen and (max-width:1024px) {
+
+nav{
+  display: none;
+}}
+    nav a {
+      position: relative;
+      width: 33.333%;
+      display: table-cell;
+      text-align: center;
+      color: #f9f1f1;
+      text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      padding: 10px 20px;
+      transition: 0.2s ease color;
+      font-size: 20px;
+      white-space: nowrap
+    }
+    
+    nav a:before,
+    nav a:after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: 0.2s ease transform;
+    }
+    
+    nav a:before {
+      top: 0;
+      left: 10px;
+      width: 6px;
+      height: 6px;
+    }
+    
+    nav a:after {
+      top: 5px;
+      left: 18px;
+      width: 4px;
+      height: 4px;
+    }
+    
+    nav a:nth-child(1):before {
+      background-color: yellow;
+    }
+    
+    nav a:nth-child(1):after {
+      background-color: red;
+    }
+    
+    nav a:nth-child(2):before {
+      background-color: #00e2ff;
+    }
+    
+    nav a:nth-child(2):after {
+      background-color: #89ff00;
+    }
+    
+    nav a:nth-child(3):before {
+      background-color: purple;
+    }
+    
+    nav a:nth-child(3):after {
+      background-color: palevioletred;
+    }
+    
+    #indicator {
+      position: absolute;
+      left: 5%;
+      bottom: 0;
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 5px;
+      transition: 0.2s ease left;
+    }
+    
+    nav a:hover {
+      color: #fff;
+    }
+    
+    nav a:hover:before,
+    nav a:hover:after {
+      transform: scale(1);
+    }
+    
+    nav a:nth-child(1):hover ~ #indicator {
+      background: linear-gradient(130deg, yellow, red);
+    }
+    
+    nav a:nth-child(2):hover ~ #indicator {
+      left: 34%;
+      background: linear-gradient(130deg, #00e2ff, #89ff00);
+    }
+    
+    nav a:nth-child(3):hover ~ #indicator {
+      left: 70%;
+      background: linear-gradient(130deg, purple, palevioletred);
+    }
+    
+    .mobile{
+      position: relative;
+    }
+
+    .hamburger {
+      font-size: 30px;
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 2;
+  }
+.mobile-nav{
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 0; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 9999; 
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  transition: .3s 
+
+  /* display: none; */
+}
+    .mobile-nav a{
+
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+
+    }
+
+
+    .mobile-nav a:hover {
+      color: #fff;
+    }
+    
+    .mobile-nav a:hover:before,
+    .mobile-nav a:hover:after {
+      transform: scale(1);
+      
+    }
+
+    .mobile-nav .closebtn{
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .mobile-nav {padding-top: 15px;}
+      .mobile-nav a {font-size: 18px;}
+      
+    }
+
+    @media screen and (min-width: 1024px) {
+      .mobile{
+        display: none;
+      }}
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+  }
+  
+  .close {
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      color: #aaa;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+  }
+  
+  video {
+      width: 300px;
+      height: 400px;
+      /* height: auto; */
+  }
+
+  .playerVideo{
+    border: 90px solid black;
+    width: 100%;
+  }
+
+  
